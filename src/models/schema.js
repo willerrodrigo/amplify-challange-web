@@ -31,6 +31,20 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "authorName": {
+                    "name": "authorName",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "thumbnailKey": {
+                    "name": "thumbnailKey",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -154,59 +168,9 @@ export const schema = {
                     }
                 }
             ]
-        },
-        "Todo": {
-            "name": "Todo",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "name": {
-                    "name": "name",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "description": {
-                    "name": "description",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                }
-            },
-            "syncable": true,
-            "pluralName": "Todos",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                }
-            ]
         }
     },
     "enums": {},
     "nonModels": {},
-    "version": "cdafb959b09e1726d7843ece5974399e"
+    "version": "cc9fe66dff942232157bfcdb885c3109"
 };

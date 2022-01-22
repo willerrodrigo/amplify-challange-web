@@ -15,6 +15,12 @@
           "additionalAuthenticationProviders": [
             {
               "authenticationType": "AWS_IAM"
+            },
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authblog"
+              }
             }
           ]
         }
@@ -55,6 +61,13 @@
           "EMAIL"
         ]
       }
+    }
+  },
+  "storage": {
+    "s3codersblogstorage": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
     }
   }
 }

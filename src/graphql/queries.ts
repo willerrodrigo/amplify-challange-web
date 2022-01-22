@@ -2,12 +2,15 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getTodo = /* GraphQL */ `
-  query GetTodo($id: ID!) {
-    getTodo(id: $id) {
+export const getPost = /* GraphQL */ `
+  query GetPost($id: ID!) {
+    getPost(id: $id) {
       id
-      name
-      description
+      title
+      content
+      blogID
+      authorName
+      thumbnailKey
       createdAt
       updatedAt
       _version
@@ -16,17 +19,20 @@ export const getTodo = /* GraphQL */ `
     }
   }
 `;
-export const listTodos = /* GraphQL */ `
-  query ListTodos(
-    $filter: ModelTodoFilterInput
+export const listPosts = /* GraphQL */ `
+  query ListPosts(
+    $filter: ModelPostFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        name
-        description
+        title
+        content
+        blogID
+        authorName
+        thumbnailKey
         createdAt
         updatedAt
         _version
@@ -38,14 +44,100 @@ export const listTodos = /* GraphQL */ `
     }
   }
 `;
-export const syncTodos = /* GraphQL */ `
-  query SyncTodos(
-    $filter: ModelTodoFilterInput
+export const syncPosts = /* GraphQL */ `
+  query SyncPosts(
+    $filter: ModelPostFilterInput
     $limit: Int
     $nextToken: String
     $lastSync: AWSTimestamp
   ) {
-    syncTodos(
+    syncPosts(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        title
+        content
+        blogID
+        authorName
+        thumbnailKey
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getBlog = /* GraphQL */ `
+  query GetBlog($id: ID!) {
+    getBlog(id: $id) {
+      id
+      name
+      posts {
+        items {
+          id
+          title
+          content
+          blogID
+          authorName
+          thumbnailKey
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listBlogs = /* GraphQL */ `
+  query ListBlogs(
+    $filter: ModelBlogFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        posts {
+          nextToken
+          startedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncBlogs = /* GraphQL */ `
+  query SyncBlogs(
+    $filter: ModelBlogFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncBlogs(
       filter: $filter
       limit: $limit
       nextToken: $nextToken
@@ -54,7 +146,10 @@ export const syncTodos = /* GraphQL */ `
       items {
         id
         name
-        description
+        posts {
+          nextToken
+          startedAt
+        }
         createdAt
         updatedAt
         _version

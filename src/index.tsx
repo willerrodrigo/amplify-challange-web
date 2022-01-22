@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Amplify, { AuthModeStrategyType } from "aws-amplify";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import config from "./aws-exports";
