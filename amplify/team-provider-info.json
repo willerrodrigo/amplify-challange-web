@@ -1,0 +1,31 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-blog-dev-205927-authRole",
+      "UnauthRoleArn": "arn:aws:iam::956912054299:role/amplify-blog-dev-205927-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::956912054299:role/amplify-blog-dev-205927-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-blog-dev-205927-deployment",
+      "UnauthRoleName": "amplify-blog-dev-205927-unauthRole",
+      "StackName": "amplify-blog-dev-205927",
+      "StackId": "arn:aws:cloudformation:us-east-1:956912054299:stack/amplify-blog-dev-205927/ad09bef0-78ba-11ec-9cf6-0a55e9340f69",
+      "AmplifyAppId": "d3249tu2tmingy",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-blog-dev-205927-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "blog1ee7a8c3": {},
+        "blog": {}
+      },
+      "function": {
+        "blog1ee7a8c3CustomMessage": {
+          "REDIRECTURL": "http://localhost:3000/",
+          "EMAILSUBJECT": "Confirme seu email no Blog da Coders Club",
+          "EMAILMESSAGE": "Utilize o código ou link abaixo para confirmar sua conta no Blog da Coders Club",
+          "deploymentBucketName": "amplify-blog-dev-205927-deployment",
+          "s3Key": "amplify-builds/blog1ee7a8c3CustomMessage-35445336666651336c6a-build.zip"
+        }
+      }
+    }
+  }
+}
