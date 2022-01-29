@@ -60,6 +60,7 @@ function Editor() {
             content,
             thumbnailKey: key,
             authorName: user.attributes.name,
+            blogID: process.env.REACT_APP_BLOG_ID,
           },
         })
       )) as GraphQLResult<CreatePostMutation>;

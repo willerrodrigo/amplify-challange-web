@@ -6,6 +6,7 @@ export const Container = styled.div`
 
   .ql-editor {
     height: 80vh;
+    background-color: #ffffff;
   }
 
   img {

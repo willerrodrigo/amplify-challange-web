@@ -8,10 +8,25 @@ export default createGlobalStyle`
         outline: 0;
     }
 
-    html, body, #root {
+    html {
         height: 100%;
+    }
+
+    html, body, #root {
         width: 100%;
         font-family: 'Roboto', sans-serif;
+        background-color: #e4e6ec;
+    }
+
+    :root {
+        --button-background-color: #367b92;
+        --button-click: #367b92;
+        --link-color: #367b92;
+        --ion-color-primary-ting: #367b92;
+
+        .Nav__navBar___xtCFA {
+            background-color: #e4e6ec;
+        }
     }
 
     #app {
