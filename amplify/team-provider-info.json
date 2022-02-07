@@ -19,7 +19,7 @@
       },
       "function": {
         "blog1ee7a8c3CustomMessage": {
-          "REDIRECTURL": "http://localhost:3000/",
+          "REDIRECTURL": "https://main.d3249tu2tmingy.amplifyapp.com",
           "EMAILSUBJECT": "Confirme seu email no Blog da Coders Club",
           "EMAILMESSAGE": "Utilize o código ou link abaixo para confirmar sua conta no Blog da Coders Club",
           "deploymentBucketName": "amplify-blog-dev-205927-deployment",
