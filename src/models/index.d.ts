@@ -16,7 +16,7 @@ export declare class Post {
   readonly id: string;
   readonly title: string;
   readonly content?: string;
-  readonly blogID?: string;
+  readonly blogID: string;
   readonly authorName: string;
   readonly thumbnailKey?: string;
   readonly createdAt?: string;
